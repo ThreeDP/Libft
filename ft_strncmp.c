@@ -6,11 +6,13 @@
 /*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 17:44:39 by coder             #+#    #+#             */
-/*   Updated: 2022/09/12 17:53:03 by coder            ###   ########.fr       */
+/*   Updated: 2022/09/12 21:16:33 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	strncmp(const char *s1, const char *s2, size_t n)
+#include <unistd.h>
+
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	pos;
 

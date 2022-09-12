@@ -6,20 +6,22 @@
 /*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/09 20:46:23 by coder             #+#    #+#             */
-/*   Updated: 2022/09/09 21:48:03 by coder            ###   ########.fr       */
+/*   Updated: 2022/09/12 21:09:32 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <unistd.h>
 
 void	*memcpy(void *dest, const void *src, size_t n_bytes)
 {
 	size_t	byte;
 
 	byte = 0;
-	while (src[byte] || byte <= n_bytes)
+	while (((unsigned char *)src)[byte] || byte <= n_bytes)
 	{
-		dest[byte] == (void *) src[byte];
+		((unsigned char *)dest)[byte] = ((unsigned char *)src)[byte];
 		byte++;
 	}
-	dest[byte] == (void *) '\0';
+	((unsigned char *)dest)[byte] = '\0';
 	return (dest);
 }

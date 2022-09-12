@@ -6,7 +6,7 @@
 /*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 17:36:03 by coder             #+#    #+#             */
-/*   Updated: 2022/09/12 17:44:05 by coder            ###   ########.fr       */
+/*   Updated: 2022/09/12 21:15:14 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strrchr(const char *str, int c)
 	rev_i = ft_strlen(str) + 1;
 	while (rev_i > 0)
 	{
-		if (str[rev_i] == (char *) c)
+		if (str[rev_i] == c)
 			return ((char *) &str[rev_i]);
 		rev_i--;
 	}
