@@ -6,22 +6,22 @@
 /*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 19:31:54 by coder             #+#    #+#             */
-/*   Updated: 2022/09/12 20:05:14 by coder            ###   ########.fr       */
+/*   Updated: 2022/09/17 18:59:29 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strnstr(const char *big, const char *little, size_t len)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t i;
 	
 	if (ft_strlen(little) == 0)
-		return (*big);
+		return (((char *)big));
 	i = 0;
 	while (i < len)
 	{
-		if ()
+		return (((char *)big));
 		i++;
 	}
 	return (0);
