@@ -13,8 +13,9 @@
 #include <unistd.h>
 
 void	*ft_memmove(void *dest, const void *src, size_t n_bytes)
-{
-	while (n_bytes >= 0)
+{	
+	
+	while (n_bytes < 0)
 	{
 		((unsigned char *)dest)[n_bytes] = ((unsigned char *)src)[n_bytes];
 		n_bytes--;

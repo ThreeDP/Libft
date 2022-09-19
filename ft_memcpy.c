@@ -12,16 +12,15 @@
 
 #include <unistd.h>
 
-void	*memcpy(void *dest, const void *src, size_t n_bytes)
+void	*ft_memcpy(void *dest, const void *src, size_t n_bytes)
 {
 	size_t	byte;
 
 	byte = 0;
-	while (((unsigned char *)src)[byte] || byte <= n_bytes)
+	while (byte < n_bytes)
 	{
 		((unsigned char *)dest)[byte] = ((unsigned char *)src)[byte];
 		byte++;
 	}
-	((unsigned char *)dest)[byte] = '\0';
-	return (dest);
+	return ((unsigned char *)dest);
 }
