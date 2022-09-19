@@ -28,4 +28,6 @@ void	*ft_memmove(void *dest, const void *src, size_t n_bytes);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 
+void	ft_inserting_sorting(void *list, size_t size);
+
 #endif
