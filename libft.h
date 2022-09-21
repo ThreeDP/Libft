@@ -6,7 +6,7 @@
 /*   By: dapaulin <dapaulin@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 07:38:11 by dapaulin          #+#    #+#             */
-/*   Updated: 2022/09/21 14:44:01 by dapaulin         ###   ########.fr       */
+/*   Updated: 2022/09/21 21:20:53 by dapaulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@
 # include <unistd.h>
 # include <stdlib.h>
 
-int		ft_islower(int c);
-int		ft_isupper(int c);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
@@ -37,5 +35,12 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 void	*ft_memchr(const void *str, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
+int		ft_atoi(const char *nptr);
+
+// Extra
+int		ft_isspace(int c);
+int		ft_signdetect(int c, int *pos);
+int		ft_islower(int c);
+int		ft_isupper(int c);
 
 #endif
