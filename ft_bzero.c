@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
+/*   By: dapaulin <dapaulin@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/09 20:32:30 by coder             #+#    #+#             */
-/*   Updated: 2022/09/12 21:03:57 by coder            ###   ########.fr       */
+/*   Created: 2022/09/21 07:12:13 by dapaulin          #+#    #+#             */
+/*   Updated: 2022/09/21 07:12:16 by dapaulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,14 @@
 
 void	ft_bzero(void *str, size_t n_bytes)
 {
-	size_t	byte;
+	size_t			byte;
+	unsigned char	*cached_str;
 
 	byte = 0;
-	while ((byte <= n_bytes) || ((unsigned char *)str)[byte])
+	cached_str = (unsigned char *)str;
+	while ((byte < n_bytes))
 	{
-		((unsigned char *)str)[byte] = '\0';
+		cached_str[byte] = '\0';
 		byte++;
 	}
 }

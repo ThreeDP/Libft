@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
+/*   By: dapaulin <dapaulin@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/09 00:13:52 by coder             #+#    #+#             */
-/*   Updated: 2022/09/17 23:16:03 by coder            ###   ########.fr       */
+/*   Created: 2022/09/21 07:36:54 by dapaulin          #+#    #+#             */
+/*   Updated: 2022/09/21 07:36:56 by dapaulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,15 @@
 
 void	*ft_memset(void *str, int c_fill, size_t n_bytes)
 {
-	size_t	byte;
-
+	size_t			byte;
+	unsigned char	*cached_str;
+	
 	byte = 0;
+	cached_str = (unsigned char *)str;
 	while (byte < n_bytes)
 	{
-		((unsigned char *)str)[byte] = c_fill;
+		cached_str[byte] = c_fill;
 		byte++;
 	}
-	return (str);
+	return (cached_str);
 }

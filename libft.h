@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
+/*   By: dapaulin <dapaulin@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/08 21:23:52 by coder             #+#    #+#             */
-/*   Updated: 2022/09/17 18:56:08 by coder            ###   ########.fr       */
+/*   Created: 2022/09/21 07:38:11 by dapaulin          #+#    #+#             */
+/*   Updated: 2022/09/21 07:38:13 by dapaulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 # include <unistd.h>
 # include <stdlib.h>
 
+int		ft_islower(int c);
+int		ft_isupper(int c);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
@@ -27,7 +29,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n_bytes);
 void	*ft_memmove(void *dest, const void *src, size_t n_bytes);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
-int		toupper(int c);
+int		ft_toupper(int c);
 int		ft_tolower(int c);
 char	*ft_strchr(const char *str, int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);

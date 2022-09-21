@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
+/*   By: dapaulin <dapaulin@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/09 23:19:10 by coder             #+#    #+#             */
-/*   Updated: 2022/09/17 21:53:30 by coder            ###   ########.fr       */
+/*   Created: 2022/09/21 07:37:07 by dapaulin          #+#    #+#             */
+/*   Updated: 2022/09/21 07:37:08 by dapaulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		i++;
 	}
 	dst[pos + i] = '\0';
-	return (ft_strlen(dst));
+	return (pos);
 }

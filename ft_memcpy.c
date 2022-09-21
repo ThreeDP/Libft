@@ -3,25 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
+/*   By: dapaulin <dapaulin@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/09 20:46:23 by coder             #+#    #+#             */
-/*   Updated: 2022/09/12 21:09:32 by coder            ###   ########.fr       */
+/*   Created: 2022/09/21 07:36:41 by dapaulin          #+#    #+#             */
+/*   Updated: 2022/09/21 07:36:42 by dapaulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	*memcpy(void *dest, const void *src, size_t n_bytes)
+void	*ft_memcpy(void *dest, const void *src, size_t n_bytes)
 {
-	size_t	byte;
+	size_t			byte;
+	unsigned char	*cached_dest;
+	unsigned char	*cached_src;
 
 	byte = 0;
-	while (((unsigned char *)src)[byte] || byte <= n_bytes)
+	cached_dest = (unsigned char *)dest;
+	cached_src = (unsigned char *)src;
+	while (byte < n_bytes)
 	{
-		((unsigned char *)dest)[byte] = ((unsigned char *)src)[byte];
+		cached_dest[byte] = cached_src[byte];
 		byte++;
 	}
-	((unsigned char *)dest)[byte] = '\0';
-	return (dest);
+	return (cached_dest);
 }
