@@ -6,14 +6,13 @@
 /*   By: dapaulin <dapaulin@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 07:36:47 by dapaulin          #+#    #+#             */
-/*   Updated: 2022/09/21 07:44:08 by dapaulin         ###   ########.fr       */
+/*   Updated: 2022/09/21 07:44:58 by dapaulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
 void	*ft_memmove(void *dest, const void *src, size_t n_bytes)
-<<<<<<< HEAD
 {
 	unsigned char	*cached_dest;
 	unsigned char	*cached_src;

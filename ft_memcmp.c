@@ -6,7 +6,7 @@
 /*   By: dapaulin <dapaulin@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 07:36:32 by dapaulin          #+#    #+#             */
-/*   Updated: 2022/09/21 07:36:34 by dapaulin         ###   ########.fr       */
+/*   Updated: 2022/09/21 07:49:20 by dapaulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t	i;
+	size_t			i;
 	unsigned char	*cached_s1;
 	unsigned char	*cached_s2;
 
