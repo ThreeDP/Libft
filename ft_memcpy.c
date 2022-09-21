@@ -6,7 +6,7 @@
 /*   By: dapaulin <dapaulin@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 07:36:41 by dapaulin          #+#    #+#             */
-/*   Updated: 2022/09/21 07:36:42 by dapaulin         ###   ########.fr       */
+/*   Updated: 2022/09/21 07:43:52 by dapaulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n_bytes)
 	unsigned char	*cached_src;
 
 	byte = 0;
+
 	cached_dest = (unsigned char *)dest;
 	cached_src = (unsigned char *)src;
 	while (byte < n_bytes)
