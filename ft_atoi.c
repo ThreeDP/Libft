@@ -6,13 +6,13 @@
 /*   By: dapaulin <dapaulin@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 20:10:07 by dapaulin          #+#    #+#             */
-/*   Updated: 2022/09/21 21:53:46 by dapaulin         ###   ########.fr       */
+/*   Updated: 2022/09/24 20:59:33 by dapaulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_atoi(const char *nptr)
+int	ft_atoi(const char *nptr)
 {
 	int		pos;
 	int		nbr;
