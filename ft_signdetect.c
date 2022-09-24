@@ -6,15 +6,15 @@
 /*   By: dapaulin <dapaulin@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 20:36:57 by dapaulin          #+#    #+#             */
-/*   Updated: 2022/09/21 21:10:23 by dapaulin         ###   ########.fr       */
+/*   Updated: 2022/09/24 22:16:44 by dapaulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_signdetect(int c, int *pos)
 {	
 	if (c == '-')
-		return (*pos+=1, -1);
+		return (*pos += 1, -1);
 	else if (c == '+')
-		return (*pos+=1, 1);
-	return (1);	
+		return (*pos += 1, 1);
+	return (1);
 }
