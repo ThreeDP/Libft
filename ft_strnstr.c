@@ -6,12 +6,11 @@
 /*   By: dapaulin <dapaulin@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 07:37:35 by dapaulin          #+#    #+#             */
-/*   Updated: 2022/09/24 20:59:07 by dapaulin         ###   ########.fr       */
+/*   Updated: 2022/09/24 21:53:50 by dapaulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "stdio.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
@@ -34,7 +33,6 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		}
 		if (cached_little[j] == '\0')
 			return (&cached_big[i]);
-		i++;
 		i += 1 + j;
 	}
 	return (0);
