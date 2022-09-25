@@ -6,7 +6,7 @@
 /*   By: dapaulin <dapaulin@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 07:38:11 by dapaulin          #+#    #+#             */
-/*   Updated: 2022/09/24 17:46:27 by dapaulin         ###   ########.fr       */
+/*   Updated: 2022/09/25 16:07:56 by dapaulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,10 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 int		ft_atoi(const char *nptr);
 void	*ft_calloc(size_t nmemb, size_t size);
-
+char    *ft_strdup(const char *s);
+// Part 2
+char    *ft_substr(char const *s, unsigned int start, size_t len);
+char    *ft_strjoin(char const *s1, char const *s2);
 // Extra
 int		ft_isspace(int c);
 int		ft_signdetect(int c, int *pos);
