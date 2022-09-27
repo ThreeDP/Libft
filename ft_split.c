@@ -15,7 +15,8 @@
 char    **ft_split(char const *s, char c)
 {
     char i = c;
-    c = *s;
-
+    
+    if (i == c)
+        c = *s;
     return (0);
 }
