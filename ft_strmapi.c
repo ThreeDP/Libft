@@ -6,7 +6,7 @@
 /*   By: dapaulin <dapaulin@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 21:55:49 by dapaulin          #+#    #+#             */
-/*   Updated: 2022/09/26 21:21:03 by dapaulin         ###   ########.fr       */
+/*   Updated: 2022/09/29 22:46:48 by dapaulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,19 @@
 
 char    *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-    f(1, *s++);
-    return ("s");
+	int		i;
+	int		size;
+	char	*ptr;
+
+	i = 0;
+	size = ft_strlen(s);
+	ptr = (char *) ft_calloc(size, sizeof(char));
+	if (ptr)
+		return (NULL);
+	while (i < size)
+	{
+		ptr[i] = f(i, s[i]);
+		i++;
+	}
+    return (ptr);
 }
