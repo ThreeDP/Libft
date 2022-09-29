@@ -6,7 +6,7 @@
 /*   By: dapaulin <dapaulin@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 22:51:45 by dapaulin          #+#    #+#             */
-/*   Updated: 2022/09/26 22:52:27 by dapaulin         ###   ########.fr       */
+/*   Updated: 2022/09/29 11:15:17 by dapaulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,9 @@
 
 void ft_lstiter(t_list *lst, void (*f)(void *))
 {
-    f(lst);
+    while (lst)
+	{
+		f(lst -> content);
+		lst = lst -> next;
+	}
 }

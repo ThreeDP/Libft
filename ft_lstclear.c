@@ -6,7 +6,7 @@
 /*   By: dapaulin <dapaulin@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 20:23:34 by dapaulin          #+#    #+#             */
-/*   Updated: 2022/09/26 21:12:37 by dapaulin         ###   ########.fr       */
+/*   Updated: 2022/09/29 11:18:04 by dapaulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,5 @@ void    ft_lstclear(t_list **lst, void (*del)(void *))
         ft_lstdelone(next, del);
         next = next -> next;
     }
-    head -> next = NULL;
+    head = NULL;
 }
