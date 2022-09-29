@@ -6,7 +6,7 @@
 /*   By: dapaulin <dapaulin@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 20:49:42 by dapaulin          #+#    #+#             */
-/*   Updated: 2022/09/29 09:49:41 by dapaulin         ###   ########.fr       */
+/*   Updated: 2022/09/29 10:22:05 by dapaulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static char	*ft_itoa_count(unsigned int n, int *count)
 		ptr = ft_itoa_count(n / 10, count);
 	}
 	else
-		ptr = (char *) calloc(*count + 1, sizeof(char));
+		ptr = (char *) ft_calloc(*count + 1, sizeof(char));
 	return (ptr);
 }
 
