@@ -6,7 +6,7 @@
 /*   By: dapaulin <dapaulin@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/24 22:00:12 by dapaulin          #+#    #+#             */
-/*   Updated: 2022/09/25 15:59:20 by dapaulin         ###   ########.fr       */
+/*   Updated: 2022/09/29 10:54:10 by dapaulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,15 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	unsigned char	*ptr;
+	void	*ptr;
+	size_t	len;
 
-	if (nmemb * size > ~(1 << 31))
-		return (NULL);
-	if (!nmemb || !size)
-		return (NULL);
-	ptr = (unsigned char *) malloc(nmemb * size);
+	if (nmemb >= ~(1<<31) || size >= ~(1<<31) || !nmemb || !size)
+		return (0);
+	len = nmemb * size;
+	ptr = (unsigned char *) malloc(len);
 	if (!ptr)
-		return (NULL);
-	ft_memset(ptr, '\0', nmemb * size);
+		return (0);
+	ft_memset(ptr, 0, len);
 	return (ptr);
 }
