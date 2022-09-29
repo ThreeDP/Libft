@@ -34,36 +34,34 @@ HEADER 			=	 		libft.h
 all: 		$(NAME)
 
 $(NAME): 	$(SRCS:.c=.o)
-	@echo		$(L_YELLOWB) Make Bonus Library... $(L_WHITE)
+	@echo		"$(L_WHITEB)The objects were compiled... $(L_WHITE)"
+	@echo		"$(L_YELLOWB) Make Mandatory Library... $(L_WHITE)"
 	ar -rc 		$(NAME) $(SRCS:.c=.o)
-	@echo		$(L_WHITEB) Result Library! $(L_WHITE)
+	@echo		"$(L_WHITEB) Result Library! $(L_WHITE)"
 
 %.o: 		%.c
-	@echo		$(L_WHITEB) Compile Objects... $(L_WHITE)
-	cc -o 		$@ -c $< -I ./ $(FLAGS)
-	@echo		$(L_WHITEB) End Compile! $(L_WHITE)
+
+	@cc -o 		$@ -c $< -I ./ $(FLAGS)
 
 norm:
-	@echo		$(L_YELLOWB) NORM executing... $(L_WHITE)
+	@echo		"$(L_YELLOWB) NORM executing... $(L_WHITE)"
 	norminette 	$(SRCS) $(HEADER)
-	@echo		$(L_WHITEB) END NORM! $(L_WHITE)
+	@echo		"$(L_WHITEB) END NORM! $(L_WHITE)"
 
 clean:
-	@echo		$(L_WHITEB) Remove Objects... $(L_WHITE)
+	@echo		"$(L_WHITEB) Remove Objects... $(L_WHITE)"
 	@rm -f 		$(SRCS:.c=.o) $(SRCS_BOUNS:.c=.o)
-	@echo		$(L_WHITEB) End Remove! $(L_WHITE)
 
 fclean: 	clean
 
-	@echo		$(L_WHITEB) Remove Exec... $(L_WHITE)
+	@echo		"$(L_WHITEB) Remove Exec... $(L_WHITE)"
 	rm -f 		$(NAME)
-	@echo		$(L_WHITEB) End Remove! $(L_WHITE)
 
 re: 		fclean all
 
 bonus: 		$(SRCS:.c=.o) $(SRCS_BOUNS:.c=.o)
-	@echo		$(L_YELLOWB) Make Bonus Library... $(L_WHITE)
+	@echo		"$(L_YELLOWB) Make Bonus Library... $(L_WHITE)"
 	ar -rc 		$(NAME) $(SRCS:.c=.o) $(SRCS_BOUNS:.c=.o)
-	@echo		$(L_WHITEB) Result Library! $(L_WHITE)
+	@echo		"$(L_WHITEB) Result Library! $(L_WHITE)"
 
 .PHONY: 	all fclean clean re
