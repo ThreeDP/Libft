@@ -10,7 +10,7 @@ L_GREENB		=			'\033[1;32m'
 ################ LIBRARY	##################
 NAME 			= 			libft.a
 ################ MANDATORY	##################
-SRCS 			=			ft_signdetect.c 	ft_isspace.c 		ft_islower.c 		ft_isupper.c \
+SRCS 			=			ft_signdetect.c 	ft_isspace.c 		ft_islower.c 		ft_isupper.c  add_one.c\
 							ft_isalpha.c 		ft_isdigit.c 		ft_isalnum.c	\
 							ft_isascii.c 		ft_isprint.c		ft_toupper.c	\
 							ft_tolower.c		ft_strlen.c 		ft_memset.c		\

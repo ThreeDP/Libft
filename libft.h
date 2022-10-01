@@ -6,7 +6,7 @@
 /*   By: dapaulin <dapaulin@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 07:38:11 by dapaulin          #+#    #+#             */
-/*   Updated: 2022/09/26 21:28:59 by dapaulin         ###   ########.fr       */
+/*   Updated: 2022/10/01 03:57:56 by dapaulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ typedef struct a_list
 }					t_list;
 
 // Part 01	==========================================================
+char		add_one(unsigned int iter, char c);
 int			ft_isalpha(int c);
 int			ft_isdigit(int c);
 int			ft_isalnum(int c);
