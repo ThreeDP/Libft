@@ -6,7 +6,7 @@
 /*   By: dapaulin <dapaulin@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 20:50:43 by dapaulin          #+#    #+#             */
-/*   Updated: 2022/09/29 20:12:55 by dapaulin         ###   ########.fr       */
+/*   Updated: 2022/10/03 23:41:48 by dapaulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,22 +15,38 @@
 
 static char	**find_words(char const *s, char c)
 {
-	int		len_pos;
+	size_t		amount;
 	char	*ptr;
 	char	*ptr_n;
+	char	*start_w;
 	
-	len_pos = 0;
+	amount = 0;
 	ptr = (char *) s;
+	ptr_n = (char *) s;
+	start_w = (char *) s;
 	while (1)
 	{
+		
 		ptr = ft_strchr(ptr, c);
-		ptr_n = ptr = ft_strchr(ptr, '\0');
-		if (ptr || (ptr_n && !ptr))
-			len_pos++;
+		if (ptr && c != 0)
+		{
+			if (ptr - start_w > 1)
+				amount++;
+			if (ptr == 0)
+				break ;
+			ptr++;
+		}
+		else
+		{
+			ptr_n = ft_strchr(ptr_n, '\0');
+			if (ptr_n - start_w > 1)
+				amount++;
+		}
 		if (!*ptr_n)
 			break ;
+		start_w = ptr;
 	}
-	return ((char **) ft_calloc(len_pos + 1, sizeof(char *)));
+	return ((char **) ft_calloc(amount + 1, sizeof(char *)));
 }
 
 static void	split_words(char **rows, char const *text, char c)
@@ -44,23 +60,32 @@ static void	split_words(char **rows, char const *text, char c)
 	i = 0;
 	start_w = (char *) text;
 	end_w = (char *) text;
+	end_n = (char *) text;
 	while (1)
 	{
 		end_w = ft_strchr(end_w, c);
-		end_n = ft_strchr(end_w, '\0');
-		if (end_w || (end_n && !end_w))
+		if (end_w && c != 0)
 		{
 			size = (end_w - start_w);
-			printf("\n%i\n", size);
-			rows[i] = (char *) calloc(size + 1, sizeof(char));
-			if (!rows[i])
-				return ;
-			ft_strlcpy(rows[i], start_w, size + 1);
-			i++;
+			if (size > 1)
+			{
+				rows[i] = ft_substr(text, start_w - text, size);
+				i++;
+			}
+			if (end_w == 0)
+				break ;
+			end_w++;
 		}
-		start_w = end_n;
+		else
+		{
+			end_n = ft_strchr(end_n, '\0');
+			size = (end_n - start_w);
+			if (size > 1)
+				rows[i] = ft_substr(text, start_w - text, size);
+		}
 		if (!*end_n)
 			break ;
+		start_w = end_w;
 	}
 }
 
