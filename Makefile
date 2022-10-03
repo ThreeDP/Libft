@@ -41,7 +41,7 @@ $(NAME): 	$(SRCS:.c=.o)
 
 %.o: 		%.c
 
-	@cc -o 		$@ -c $< -I ./ $(FLAGS)
+	@cc -o 		$@ -c $< -I ./
 
 norm:
 	@echo		"$(L_YELLOWB) NORM executing... $(L_WHITE)"
