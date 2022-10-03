@@ -6,20 +6,27 @@
 /*   By: dapaulin <dapaulin@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 15:00:24 by dapaulin          #+#    #+#             */
-/*   Updated: 2022/10/01 03:47:12 by dapaulin         ###   ########.fr       */
+/*   Updated: 2022/10/02 00:32:32 by dapaulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*new_sub;
+	size_t	l;
 
-	new_sub = (char *) ft_calloc(len, sizeof(char) + 1);
-	if (!new_sub)
-		return (NULL);
-	if (start < ft_strlen(s))
-		ft_strlcpy(new_sub, &s[start], len);
+	l = ft_strlen(s);
+	if (start > l)
+		return ft_strdup("");
+	if (l >= len)
+		l = len;
+	if (ft_strlen(s) - start < l)
+		l = ft_strlen(&s[start]);
+	new_sub = (char *) ft_calloc(l + 1, sizeof(char));
+	if (new_sub)
+		ft_strlcpy(new_sub, &s[start], l + 1);
 	return (new_sub);
 }
