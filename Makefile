@@ -40,8 +40,7 @@ $(NAME): 	$(SRCS:.c=.o)
 	@echo		"$(L_WHITEB) Result Library! $(L_WHITE)"
 
 %.o: 		%.c
-
-	@cc -o 		$@ -c $< -I ./
+	@cc -o 		$@ -c $< -I ./ $(FLAGS)
 
 norm:
 	@echo		"$(L_YELLOWB) NORM executing... $(L_WHITE)"

@@ -6,7 +6,7 @@
 /*   By: dapaulin <dapaulin@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 07:37:35 by dapaulin          #+#    #+#             */
-/*   Updated: 2022/10/04 01:14:27 by dapaulin         ###   ########.fr       */
+/*   Updated: 2022/10/04 20:29:10 by dapaulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	len_little;
 	char	*cached_big;
 	char	*cached_little;
-	size_t	l = -1;
 
 	i = 0;
 	cached_big = (char *)big;
