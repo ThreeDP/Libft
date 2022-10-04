@@ -6,7 +6,7 @@
 /*   By: dapaulin <dapaulin@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 07:37:00 by dapaulin          #+#    #+#             */
-/*   Updated: 2022/10/02 01:11:45 by dapaulin         ###   ########.fr       */
+/*   Updated: 2022/10/04 22:19:35 by dapaulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,13 @@
 char	*ft_strchr(const char *str, int c)
 {
 	size_t	i;
-	size_t	size;
-	char	*cached_str;
+	char	cached_c;
 
 	i = 0;
-	size = ft_strlen(str);
-	cached_str = (char *)str;
-	while (i <= size + 1)
-	{
-		if (cached_str[i] == (char)c)
-			return (&cached_str[i]);
+	cached_c = (char)c;
+	while (str[i] && str[i] != cached_c)
 		i++;
-	}
+	if (str[i] == cached_c)
+		return (&((char *)str)[i]);
 	return (0);
 }
