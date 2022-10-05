@@ -6,7 +6,7 @@
 /*   By: dapaulin <dapaulin@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 17:37:41 by dapaulin          #+#    #+#             */
-/*   Updated: 2022/09/25 20:33:10 by dapaulin         ###   ########.fr       */
+/*   Updated: 2022/10/05 01:59:29 by dapaulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,32 +15,25 @@
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	i;
-	size_t	start;
-	size_t	end;
+	char	*start;
+	char	*end;
 	char	*new;
 
 	i = 0;
-	start = 0;
-	end = ft_strlen(s1);
-	while (set[i])
+	start = (char *)s1;
+	end = (char *) s1 + ft_strlen(s1);
+	while (set[i++])
 	{
-		if(ft_strchr(s1, set[i]) == &s1[start])
-			start++;
-		if(ft_strrchr(s1, set[i]) == &s1[end])
+		if (!ft_strrchr(start, s1[i]) && str)
+			break ;
+		else if (set[i])
+		{
+			
 			end--;
-		i++;
+		}
 	}
-	while (i > 0)
-	{
-		if(ft_strchr(s1, set[i]) == &s1[start] && start == 0)
-			start++;
-		if(ft_strrchr(s1, set[i]) == &s1[end] && end == ft_strlen(s1))
-			end--;
-		i--;
-	}
-	new = (char *) malloc((end - start) * sizeof(char));
-	if (!new)
-		return (NULL);
-	ft_strlcpy(new, &s1[start], end);
+	new = (char *) ft_calloc((end - start) + 1, sizeof(char));
+	if (new)
+		ft_strlcpy(new, start, end - start);
 	return(new);
 }
