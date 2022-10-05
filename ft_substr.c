@@ -6,7 +6,7 @@
 /*   By: dapaulin <dapaulin@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 15:00:24 by dapaulin          #+#    #+#             */
-/*   Updated: 2022/10/02 00:32:32 by dapaulin         ###   ########.fr       */
+/*   Updated: 2022/10/05 00:12:49 by dapaulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	l = ft_strlen(s);
 	if (start > l)
-		return ft_strdup("");
+		return (ft_strdup(""));
 	if (l >= len)
 		l = len;
 	if (ft_strlen(s) - start < l)
