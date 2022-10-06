@@ -14,26 +14,18 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	i;
-	char	*start;
-	char	*end;
-	char	*new;
-
-	i = 0;
-	start = (char *)s1;
-	end = (char *) s1 + ft_strlen(s1);
-	while (set[i++])
-	{
-		if (!ft_strrchr(start, s1[i]) && str)
-			break ;
-		else if (set[i])
-		{
-			
-			end--;
-		}
-	}
-	new = (char *) ft_calloc((end - start) + 1, sizeof(char));
-	if (new)
-		ft_strlcpy(new, start, end - start);
-	return(new);
+	char 	*new_s
+	size_t	s;
+	size_t	e;
+	
+	s = 0;
+	while (s1[s] && ft_strchr(set, s1[s]))
+		s++;
+	e = ft_strlen(s1);
+	while (e > 0 && ft_strchr(set, s1[e]))
+		e--;
+	new_s = (char *) ft_calloc((e - s) + 1, sizeof(char));
+	if (new_s)
+		ft_strlcpy(new_s, s, e - s);
+	return(new_s);
 }
