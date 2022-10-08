@@ -10,8 +10,7 @@ L_GREENB		=			'\033[1;32m'
 ################ LIBRARY	##################
 NAME 			= 			libft.a
 ################ MANDATORY	##################
-SRCS 			=			ft_signdetect.c 	ft_isspace.c 		ft_islower.c 		ft_isupper.c  add_one.c\
-							ft_isalpha.c 		ft_isdigit.c 		ft_isalnum.c	\
+SRCS 			=			ft_isalpha.c 		ft_isdigit.c 		ft_isalnum.c	\
 							ft_isascii.c 		ft_isprint.c		ft_toupper.c	\
 							ft_tolower.c		ft_strlen.c 		ft_memset.c		\
 							ft_bzero.c 			ft_memcpy.c 		ft_memmove.c 	\
@@ -44,17 +43,16 @@ $(NAME): 	$(SRCS:.c=.o)
 
 norm:
 	@echo		"$(L_YELLOWB) NORM executing... $(L_WHITE)"
-	norminette 	$(SRCS) $(HEADER)
+	@norminette 	$(SRCS) $(HEADER)
 	@echo		"$(L_WHITEB) END NORM! $(L_WHITE)"
 
 clean:
-	@echo		"$(L_WHITEB) Remove Objects... $(L_WHITE)"
 	@rm -f 		$(SRCS:.c=.o) $(SRCS_BOUNS:.c=.o)
+	@echo		"$(L_YELLOWB) Objects Removed... $(L_WHITE)"
 
 fclean: 	clean
-
-	@echo		"$(L_WHITEB) Remove Exec... $(L_WHITE)"
-	rm -f 		$(NAME)
+	@rm -f 		$(NAME)
+	@echo		"$(L_YELLOWB) Source Removed... $(L_WHITE)"
 
 re: 		fclean all
 

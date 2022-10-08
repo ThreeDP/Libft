@@ -6,11 +6,10 @@
 /*   By: dapaulin <dapaulin@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/24 22:00:12 by dapaulin          #+#    #+#             */
-/*   Updated: 2022/09/29 17:18:04 by dapaulin         ###   ########.fr       */
+/*   Updated: 2022/10/08 18:43:50 by dapaulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 void	*ft_calloc(size_t nmemb, size_t size)

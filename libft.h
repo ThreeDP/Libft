@@ -6,15 +6,12 @@
 /*   By: dapaulin <dapaulin@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 07:38:11 by dapaulin          #+#    #+#             */
-/*   Updated: 2022/10/01 03:57:56 by dapaulin         ###   ########.fr       */
+/*   Updated: 2022/10/08 18:46:17 by dapaulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# include <sys/types.h>
-# include <sys/stat.h>
-# include <fcntl.h>
 # include <unistd.h>
 # include <stdlib.h>
 
@@ -25,7 +22,6 @@ typedef struct a_list
 }					t_list;
 
 // Part 01	==========================================================
-char		add_one(unsigned int iter, char c);
 int			ft_isalpha(int c);
 int			ft_isdigit(int c);
 int			ft_isalnum(int c);
@@ -73,11 +69,5 @@ void		ft_lstdelone(t_list *lst, void (*del)(void *));
 void		ft_lstclear(t_list **lst, void (*del)(void *));
 void		ft_lstiter(t_list *lst, void (*f)(void *));
 t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
-
-// Extra ********
-int			ft_isspace(int c);
-int			ft_signdetect(int c, int *pos);
-int			ft_islower(int c);
-int			ft_isupper(int c);
 
 #endif
