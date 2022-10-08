@@ -9,6 +9,7 @@ L_GREEN			=			'\033[0;32m'
 L_GREENB		=			'\033[1;32m'
 ################ LIBRARY	##################
 NAME 			= 			libft.a
+BONUS			=			libft.a
 ################ MANDATORY	##################
 SRCS 			=			ft_isalpha.c 		ft_isdigit.c 		ft_isalnum.c	\
 							ft_isascii.c 		ft_isprint.c		ft_toupper.c	\
@@ -32,14 +33,18 @@ HEADER 			=	 		libft.h
 ################ RULES		##################
 all: 		$(NAME)
 
-$(NAME): 	$(SRCS:.c=.o)
-	@echo		"$(L_WHITEB)The objects were compiled... $(L_WHITE)"
-	@echo		"$(L_YELLOWB) Make Mandatory Library... $(L_WHITE)"
-	ar -rc 		$(NAME) $(SRCS:.c=.o)
-	@echo		"$(L_WHITEB) Result Library! $(L_WHITE)"
-
 %.o: 		%.c
-	@cc -o 		$@ -c $< -I ./ $(FLAGS)
+	cc -o 		$@ -c $< -I ./ $(FLAGS)
+
+$(NAME): 	$(SRCS:.c=.o)
+	ar -rcs 		$(NAME) $(SRCS:.c=.o)
+	@echo		"$(L_YELLOWB) Mandatory Part... $(L_WHITE)"
+
+bonus: 		$(NAME)	$(SRCS_BOUNS:.c=.o)
+
+$(SRCS_BOUNS:.c=.o): 
+	cc -o 		$@ -c $(@:.o=.c) -I ./ $(FLAGS)
+	ar -rc 		$(NAME) $@
 
 norm:
 	@echo		"$(L_YELLOWB) NORM executing... $(L_WHITE)"
@@ -56,9 +61,4 @@ fclean: 	clean
 
 re: 		fclean all
 
-bonus: 		$(SRCS:.c=.o) $(SRCS_BOUNS:.c=.o)
-	@echo		"$(L_YELLOWB) Make Bonus Library... $(L_WHITE)"
-	ar -rc 		$(NAME) $(SRCS:.c=.o) $(SRCS_BOUNS:.c=.o)
-	@echo		"$(L_WHITEB) Result Library! $(L_WHITE)"
-
-.PHONY: 	all fclean clean re
+.PHONY: 	all bonus fclean clean re

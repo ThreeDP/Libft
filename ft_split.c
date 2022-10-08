@@ -6,12 +6,11 @@
 /*   By: dapaulin <dapaulin@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 20:50:43 by dapaulin          #+#    #+#             */
-/*   Updated: 2022/10/05 00:38:03 by dapaulin         ###   ########.fr       */
+/*   Updated: 2022/10/08 20:59:33 by dapaulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static char	**find_words(char const *s, char c)
 {

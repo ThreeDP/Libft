@@ -6,12 +6,11 @@
 /*   By: dapaulin <dapaulin@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 07:37:00 by dapaulin          #+#    #+#             */
-/*   Updated: 2022/10/04 22:19:35 by dapaulin         ###   ########.fr       */
+/*   Updated: 2022/10/08 21:09:41 by dapaulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 char	*ft_strchr(const char *str, int c)
 {
