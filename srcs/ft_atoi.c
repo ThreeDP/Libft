@@ -21,13 +21,6 @@ static int	ft_signdetect(int c, int *pos)
 	return (1);
 }
 
-static int	ft_isspace(int c)
-{
-	if ((c >= 9 && c <= 13) || c == 32)
-		return (1 << 10);
-	return (0);
-}
-
 int	ft_atoi(const char *nptr)
 {
 	int		pos;
