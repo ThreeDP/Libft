@@ -3,6 +3,9 @@
   <h1>Biblioteca de funções em C</h1>
 </div>
 
+# Score
+[![dapaulin's 42 Libft Score](https://badge42.vercel.app/api/v2/cl9hhx9hp00400gmjtv4jf33f/project/2769407)](https://github.com/JaeSeoKim/badge42)
+
 # Sobre
 > O projeto Libft é uma biblioteca que contém algumas das funções base para o desenvolvimento de projetos na linguagem C. O objetivo do projeto é introduzir alguns dos conceitos do desenvolvimento de software como ponteiros, alocação e manipulação de memória dinámica, manipulação de strings, converções de tipo e listas encadeadas.
 
