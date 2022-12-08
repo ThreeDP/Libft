@@ -1,6 +1,6 @@
 #include "../test.h"
 
-static char	add_one(char c)
+char	add_one(char c)
 {
 	return (c + 1);
 }
