@@ -67,7 +67,7 @@ MU_TEST_SUITE(passing_a_char_backslash_0_should_be_empty)
 	char        *file               = "./files/empty";
 	char        input               = '\0';
 	char        *exp_str            = "";
-	int         exp_size            = 0;
+	int         exp_size            = 1;
 
 	//ACT
 	setup(file, &fd);
