@@ -60,6 +60,7 @@ int			ft_putchar_fd(char c, int fd);
 int			ft_putstr_fd(char *s, int fd);
 int			ft_putendl_fd(char *s, int fd);
 int			ft_putnbr_fd(int nb, int fd);
+int			ft_puthex_fd(unsigned long nb, int fd, char *case);
 
 // Bonus	==========================================================
 t_list		*ft_lstnew(void *content);
