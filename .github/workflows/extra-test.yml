@@ -1,12 +1,12 @@
-name: Bonus Tests
+name: Extra Tests
 on: [push]
 jobs:
-  bonus_tests:
+  extra_tests:
     runs-on: ubuntu-latest
     defaults:
       run:
         working-directory: minunit
     steps:
     - uses: actions/checkout@v2
-    - name: Bonus Tests
-      run: make b
+    - name: Extra Tests
+      run: make e
