@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "../test.h"
+#include <stdio.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
@@ -18,7 +19,7 @@
 
 static int  setup(char *file, int *fd)
 {
-    fd = open(file, O_WRONLY | O_CREAT | O_APPEND, S_IRUSR | S_IWUSR);
+    *fd = open(file, O_WRONLY | O_CREAT | O_APPEND, S_IRUSR | S_IWUSR);
     if (!*fd)
         return (0);
     return (1);
@@ -26,37 +27,34 @@ static int  setup(char *file, int *fd)
 
 static char *unset(char *file, int fd)
 {
-    char    buf[BUFFER_SIZE];
+	char    buf[BUFFER_SIZE];
 
-    close(fd);
-    fd = open(file, O_RDONLY);
-    if (read(fd, buf, BUFFER_SIZE) == -1)
-        return (NULL);
-    remove(file);
-    return (ft_strdup(buf));
+	close(fd);
+	fd = open(file, O_RDONLY);
+	read(fd, buf, BUFFER_SIZE);
+	remove(file);
+	return (ft_strdup(buf));
 }
 
 MU_TEST_SUITE(passing_a_char_D_should_be_1)
 {
 	//ARRANGE
-    int         fd;
-    int         size;
-    char        *str;
-    char        *file               = "./files/D";
-	char        c                   = 'D';
-    char        *exp_str            = "D";
-    int         exp_size            = 1;
+	int         fd;
+	int         size;
+	char        *str;
+	char        *file               = "./files/D";
+	char        input               = 'D';
+	char        *exp_str            = "D";
+	int         exp_size            = 1;
 
 	//ACT
-    if (!setup(file, &fd))
-        return ;
-	size = ft_putchar_fd(c, 1);
+	setup(file, &fd);
+	size = ft_putchar_fd(input, fd);
 
 	//ASSERT
-    str = unset(file, fd);
-    mu_assert_int_eq(exp_size, size);
-    mu_assert_string_eq(exp_str, str);
-    free(str);
+	str = unset(file, fd);
+	mu_assert_int_eq(exp_size, size);
+	mu_assert_string_eq(exp_str, str);
 }
 
 MU_TEST_SUITE(test_suite)

@@ -8,7 +8,7 @@ L_YELLOWB		=			'\033[1;33m'
 L_GREEN			=			'\033[0;32m'
 L_GREENB		=			'\033[1;32m'
 ################ CONFIG		##################
-DIR 			= 			../
+DIR 			= 			../srcs/
 LIB 			= 			libft.a
 TEST			=			./test/
 SRCS 			= 			$(wildcard ./test/*.c)

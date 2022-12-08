@@ -24,7 +24,6 @@ static void	ft_putnbr_fd_aux(unsigned int nb, int fd, int *ret)
 
 int	ft_putnbr_fd(int nb, int fd)
 {
-	char			c;
 	int				size;
 	int				signal;
 
