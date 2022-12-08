@@ -96,6 +96,8 @@ MU_TEST_SUITE(passing_a_invalid_fd_should_be_minus_1)
 MU_TEST_SUITE(test_suite)
 {
 	MU_RUN_TEST(passing_a_char_D_should_be_1);
+    MU_RUN_TEST(passing_a_char_backslash_0_should_be_empty);
+    MU_RUN_TEST(passing_a_invalid_fd_should_be_minus_1);
 }
 
 int main() {
