@@ -36,24 +36,6 @@ MU_TEST_SUITE(test_strlcpy_entering_ah_oi_3_set_dst_as_oi_and_returns_2)
 	mu_assert_string_eq(expected_dst, dst);
 }
 
-MU_TEST_SUITE(test_strlcpy_entering_papel_boiada_7_set_dst_as_boiada_and_returns_6)
-{
-	//ARRANGE
-	char	dst[] = "papel";
-	char	src[] = "boiada";
-	int		size = 7;
-	int		expected_result = 6;
-	char	expected_dst[] = "boiada";
-	int		actual_result;
-
-	//ACT
-	actual_result = ft_strlcpy(dst, src, size);
-
-	//ASSERT
-	mu_assert_int_eq(expected_result, actual_result);
-	mu_assert_string_eq(expected_dst, dst);
-}
-
 MU_TEST_SUITE(test_strlcpy_entering_ah_boi_3_set_dst_as_bo_and_returns_3)
 {
 	//ARRANGE
