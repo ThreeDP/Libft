@@ -1,12 +1,12 @@
 ################  COLORS	##################
-L_RED			=			'\033[0;31m'
-L_REDB			=			'\033[1;31m'
-L_WHITE			=			"\033[0;37m"
-L_WHITEB		=			'\033[1;37m'
-L_YELLOW		=			"\033[0;33m"
-L_YELLOWB		=			'\033[1;33m'
-L_GREEN			=			'\033[0;32m'
-L_GREENB		=			'\033[1;32m'
+L_RED			=			\033[0;31m
+L_REDB			=			\033[1;31m
+L_WHITE			=			\033[0;37m
+L_WHITEB		=			\033[1;37m
+L_YELLOW		=			\033[0;33m
+L_YELLOWB		=			\033[1;33m
+L_GREEN			=			\033[0;32m
+L_GREENB		=			\033[1;32m
 ################ CONFIG		##################
 DIR 			= 			../srcs/
 LIB 			= 			libft.a
@@ -20,19 +20,19 @@ FLAGS 			= 			-Wall -Werror -Wextra
 all: 		m b e
 
 m:			$(SRCS:.c=.o)
-	@echo		$(L_YELLOWB) [Compiled Mandatory!] $(L_WHITE)
+	@echo		"$(L_GREENB)**********[Compiled Mandatory!]**********$(L_WHITE)"
 
 b:			$(SRCS_BONUS:.c=.o)
-	@echo		$(L_YELLOWB)[Compiled Bonus!]$(L_WHITE)
+	@echo		"$(L_GREENB)************[Compiled Bonus!]************$(L_WHITE)"
 
 e:			$(SRCS_EXTRA:.c=.o)
-	@echo		$(L_YELLOWB)[Compiled Extra!]$(L_WHITE)
+	@echo		"$(L_GREENB)************[Compiled Extra!]************$(L_WHITE)"
 
 %.o: 		%.c $(HEADERS) 
 	@cd 		$(DIR) && $(MAKE)
 	@cc 		-o $@ -c $< $(FLAGS)
 	@gcc		$(FLAGS) $@ -I $(DIR) -L $(DIR) -lft
-	@echo		"$(L_YELLOWB)"RUN TEST: $@ "$(L_WHITE)"
+	@echo		"$(L_YELLOWB)[testing: $@]$(L_WHITE)"
 	@./a.out
 
 norm:
