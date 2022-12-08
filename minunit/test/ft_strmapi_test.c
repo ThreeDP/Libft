@@ -1,5 +1,10 @@
 #include "../test.h"
 
+static char	add_one(char c)
+{
+	return (c + 1);
+}
+
 MU_TEST_SUITE(passing_a_string_1234_should_be_1357)
 {
 	//ARRANGE
