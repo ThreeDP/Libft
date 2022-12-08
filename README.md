@@ -4,6 +4,7 @@
 </div>
 
 [![norminette](https://github.com/ThreeDP/Libft/actions/workflows/norminette.yml/badge.svg)](https://github.com/ThreeDP/Libft/actions/workflows/norminette.yml)
+[![mandatory](https://github.com/ThreeDP/Libft/actions/workflows/mandatory-test.yml/badge.svg)](https://github.com/ThreeDP/Libft/actions/workflows/mandatory-test.yml)
 
 # Score
 [![dapaulin's 42 Libft Score](https://badge42.vercel.app/api/v2/cl9hhx9hp00400gmjtv4jf33f/project/2769407)](https://github.com/JaeSeoKim/badge42)
