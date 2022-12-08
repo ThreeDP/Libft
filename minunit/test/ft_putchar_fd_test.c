@@ -65,7 +65,7 @@ MU_TEST_SUITE(passing_a_char_backslash_0_should_be_empty)
 	int         size;
 	char        *str;
 	char        *file               = "./files/empty";
-	char        input               = 'D';
+	char        input               = '\0';
 	char        *exp_str            = "";
 	int         exp_size            = 0;
 
