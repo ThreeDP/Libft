@@ -3,4 +3,6 @@
 # include <stdlib.h>
 # include "minunit.h"
 # include "../srcs/libft.h"
+
+# define BUFFER_SIZE 666
 #endif
