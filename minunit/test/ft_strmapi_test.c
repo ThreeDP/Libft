@@ -1,6 +1,6 @@
 #include "../test.h"
 
-char	add_one(int i, char c)
+char	add_one(unsigned int i, char c)
 {
 	return (c + i);
 }
