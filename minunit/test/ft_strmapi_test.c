@@ -1,8 +1,8 @@
 #include "../test.h"
 
-char	add_one(char c)
+char	add_one(int i, char c)
 {
-	return (c + 1);
+	return (c + i);
 }
 
 MU_TEST_SUITE(passing_a_string_1234_should_be_1357)
