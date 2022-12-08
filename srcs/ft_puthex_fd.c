@@ -12,18 +12,18 @@
 
 #include "libft.h"
 
-static void ft_puthex_fd_aux(unsigned long nb, int fd, int *ret, char *caset)
+static void	ft_puthex_fd_aux(unsigned long nb, int fd, int *ret, char *caset)
 {
 	if (nb >= 16)
 		ft_puthex_fd_aux(nb / 16, fd, ret, caset);
 	*ret += ft_putchar_fd(caset[(nb % 16)], fd);
 }
 
-int ft_puthex_fd(unsigned long nb, int fd, char *caset)
+int	ft_puthex_fd(unsigned long nb, int fd, char *caset)
 {
-    int size;
+	int	size;
 
 	size = 0;
-    ft_puthex_fd_aux(nb / 16, fd, &size, caset);
-    return (size);
+	ft_puthex_fd_aux(nb / 16, fd, &size, caset);
+	return (size);
 }
