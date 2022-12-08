@@ -36,16 +36,17 @@ all: 		$(NAME)
 
 %.o: 		%.c
 	cc -o 		$@ -c $< -I ./ $(FLAGS)
+	ar -rcs 	$(NAME) $@
 
 $(NAME): 	$(SRCS:.c=.o)
 	@echo		$(L_YELLOWB) Compile Mandatory $(L_WHITE)
-	ar -rcs 		$(NAME) $(SRCS:.c=.o)
 
 bonus: 		$(NAME)	$(SRCS_BOUNS:.c=.o)
+	@echo		$(L_YELLOWB) Compile Bonus $(L_WHITE)
 
 $(SRCS_BOUNS:.c=.o): 
 	cc -o 		$@ -c $(@:.o=.c) -I ./ $(FLAGS)
-	ar -rc 		$(NAME) $@
+	ar -rcs 	$(NAME) $@
 
 norm:
 	@echo		"$(L_YELLOWB) NORM executing... $(L_WHITE)"
