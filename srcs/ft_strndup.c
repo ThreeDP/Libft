@@ -1,26 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_strndup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dapaulin <dapaulin@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: dapaulin <dapaulin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/26 18:14:41 by dapaulin          #+#    #+#             */
-/*   Updated: 2022/10/08 19:00:20 by dapaulin         ###   ########.fr       */
+/*   Created: 2022/11/19 13:27:33 by dapaulin          #+#    #+#             */
+/*   Updated: 2022/11/29 14:19:40 by dapaulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_lstsize(t_list *lst)
+char	*ft_strndup(const char *s, size_t size)
 {
-	int	size;
+	char	*ptr;
 
-	size = 0;
-	while (lst)
-	{
-		lst = lst->next;
-		size++;
-	}
-	return (size);
+	ptr = (char *) malloc(size * sizeof(char) + 1);
+	if (!ptr)
+		return (NULL);
+	ft_strlcpy(ptr, s, size + 1);
+	return (ptr);
 }
