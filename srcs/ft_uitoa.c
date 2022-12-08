@@ -19,7 +19,7 @@ static char	*ft_uitoa_count(unsigned int n, int *count)
 	if (n >= 10)
 	{
 		*count += 1;
-		ptr = ft_itoa_count(n / 10, count);
+		ptr = ft_uitoa_count(n / 10, count);
 	}
 	else
 		ptr = (char *) ft_calloc(*count + 1, sizeof(char));
@@ -29,7 +29,7 @@ static char	*ft_uitoa_count(unsigned int n, int *count)
 static void	ft_uitoa_aux(unsigned int n, int count, char *ptr)
 {
 	if (n >= 10)
-		ft_itoa_aux(n / 10, count - 1, ptr);
+		ft_uitoa_aux(n / 10, count - 1, ptr);
 	ptr[count] = (n % 10) + '0';
 }
 
@@ -39,7 +39,7 @@ char	*ft_uitoa(unsigned int n)
 	int		count;
 
 	count = 1;
-	ptr = ft_itoa_count(n, &count);
-	ft_itoa_aux(n, count -1, ptr);
+	ptr = ft_uitoa_count(n, &count);
+	ft_uitoa_aux(n, count -1, ptr);
 	return (ptr);
 }
