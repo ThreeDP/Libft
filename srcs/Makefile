@@ -38,8 +38,8 @@ all: 		$(NAME)
 	cc -o 		$@ -c $< -I ./ $(FLAGS)
 
 $(NAME): 	$(SRCS:.c=.o)
+	@echo		$(L_YELLOWB) Compile Mandatory $(L_WHITE)
 	ar -rcs 		$(NAME) $(SRCS:.c=.o)
-	@echo		"$(L_YELLOWB) Mandatory Part... $(L_WHITE)"
 
 bonus: 		$(NAME)	$(SRCS_BOUNS:.c=.o)
 
