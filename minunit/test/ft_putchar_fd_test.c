@@ -27,11 +27,12 @@ static int  setup(char *file, int *fd)
 
 static char *unset(char *file, int fd)
 {
-	char    buf[BUFFER_SIZE];
+	char    buf[2];
 
 	close(fd);
 	fd = open(file, O_RDONLY);
-	read(fd, buf, BUFFER_SIZE);
+	read(fd, buf, 2);
+    buf[1] = '\0';
 	remove(file);
 	return (ft_strdup(buf));
 }
