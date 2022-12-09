@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa_base.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dapaulin <dapaulin@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/12/09 16:31:37 by dapaulin          #+#    #+#             */
+/*   Updated: 2022/12/09 16:33:35 by dapaulin         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static char	*ft_itoa_base_count(unsigned int n, int *count, unsigned int base)
@@ -14,14 +26,14 @@ static char	*ft_itoa_base_count(unsigned int n, int *count, unsigned int base)
 	return (ptr);
 }
 
-static void	ft_itoa_base_aux(unsigned int n, int count, char *ptr, unsigned int base)
+static void	ft_itoa_base_aux(unsigned int n, int i, char *p, unsigned int b)
 {
-	if (n >= base)
-		ft_itoa_base_aux(n / base, count - 1, ptr, base);
-    if ((n % base) > 9)
-	    ptr[count] = ((n % base) - 10) + 'A';
-    else
-        ptr[count] = (n % base) + '0';
+	if (n >= b)
+		ft_itoa_base_aux(n / b, i - 1, p, b);
+	if ((n % b) > 9)
+		p[i] = ((n % b) - 10) + 'A';
+	else
+		p[i] = (n % b) + '0';
 }
 
 char	*ft_itoa_base(unsigned int n, int base)
