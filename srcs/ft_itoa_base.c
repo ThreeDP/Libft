@@ -6,13 +6,13 @@
 /*   By: dapaulin <dapaulin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 16:31:37 by dapaulin          #+#    #+#             */
-/*   Updated: 2022/12/09 16:33:35 by dapaulin         ###   ########.fr       */
+/*   Updated: 2022/12/09 19:10:22 by dapaulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	*ft_itoa_base_count(unsigned int n, int *count, unsigned int base)
+static char	*ft_itoa_base_count(unsigned long n, int *count, unsigned int base)
 {
 	char	*ptr;
 
@@ -26,7 +26,7 @@ static char	*ft_itoa_base_count(unsigned int n, int *count, unsigned int base)
 	return (ptr);
 }
 
-static void	ft_itoa_base_aux(unsigned int n, int i, char *p, unsigned int b)
+static void	ft_itoa_base_aux(unsigned long n, int i, char *p, unsigned int b)
 {
 	if (n >= b)
 		ft_itoa_base_aux(n / b, i - 1, p, b);
@@ -36,7 +36,7 @@ static void	ft_itoa_base_aux(unsigned int n, int i, char *p, unsigned int b)
 		p[i] = (n % b) + '0';
 }
 
-char	*ft_itoa_base(unsigned int n, int base)
+char	*ft_itoa_base(unsigned long n, int base)
 {
 	char	*ptr;
 	int		count;
