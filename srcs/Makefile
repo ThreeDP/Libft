@@ -24,7 +24,7 @@ SRCS 			=			ft_isalpha.c 		ft_isdigit.c 		ft_isalnum.c	\
 							ft_putchar_fd.c 	ft_putstr_fd.c 		ft_putendl_fd.c	\
 							ft_putnbr_fd.c		ft_isspace.c		ft_islower.c	\
 							ft_isupper.c		ft_strndup.c		ft_uitoa.c		\
-							ft_puthex_fd.c
+							ft_puthex_fd.c		ft_itoa_base.c
 ################ BONUS  	##################
 SRCS_BOUNS 		=			ft_lstnew.c 		ft_lstadd_front.c 	ft_lstsize.c	\
 							ft_lstlast.c		ft_lstadd_back.c 	ft_lstdelone.c	\
@@ -55,7 +55,7 @@ norm:
 	@echo		"$(L_WHITEB) END NORM! $(L_WHITE)"
 
 clean:
-	@rm -f 		$(SRCS:.c=.o) $(SRCS_BOUNS:.c=.o)
+	@rm -f 		$(SRCS:.c=.o) $(SRCS_BOUNS:.c=.o) $(SRCS_EXTRA:.c=.o)
 	@echo		"$(L_YELLOWB) Objects Removed... $(L_WHITE)"
 
 fclean: 	clean
