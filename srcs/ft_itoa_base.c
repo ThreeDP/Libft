@@ -6,7 +6,7 @@
 /*   By: dapaulin <dapaulin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 16:31:37 by dapaulin          #+#    #+#             */
-/*   Updated: 2022/12/09 19:30:49 by dapaulin         ###   ########.fr       */
+/*   Updated: 2022/12/09 19:58:28 by dapaulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static void	ft_itoa_base_aux(unsigned long n, int i, char *p, unsigned long b)
 	if (n >= b)
 		ft_itoa_base_aux(n / b, i - 1, p, b);
 	if ((n % b) > 9)
-		p[i] = ((n % b) - 10) + 'A';
+		p[i] = ((n % b) - 10) + 'a';
 	else
 		p[i] = (n % b) + '0';
 }
