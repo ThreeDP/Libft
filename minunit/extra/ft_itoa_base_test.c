@@ -5,7 +5,7 @@ MU_TEST_SUITE(passing_the_number_10_with_base_HEX_should_be_A)
 	//ARRANGE
 	int			number 				= 10;
 	int			base				= 16;
-	char		*expected_result	= "A";
+	char		*expected_result	= "a";
 	char		*actual_result;
 
 	//ACT
@@ -37,7 +37,7 @@ MU_TEST_SUITE(passing_the_number_15_with_base_HEX_should_be_F)
 	//ARRANGE
 	int			number 				= 15;
 	int			base				= 16;
-	char		*expected_result	= "F";
+	char		*expected_result	= "f";
 	char		*actual_result;
 
 	//ACT
@@ -67,7 +67,7 @@ MU_TEST_SUITE(passing_the_number_9788_with_base_10_should_be_9788_string)
 MU_TEST_SUITE(passing_the_number_MIN_INT_with_base_10_should_be_2147483648_string)
 {
 	//ARRANGE
-	int			number				= (1<<31);
+	int			number				= -2147483648;
 	int			base				= 10;
 	char		*expected_result	= "2147483648";
 	char		*actual_result;
@@ -85,7 +85,7 @@ MU_TEST_SUITE(passing_the_number_MAX_INT_with_base_16_should_be_7FFFFFFF_string)
 	//ARRANGE
 	int			number				= 2147483647;
 	int			base				= 16;
-	char		*expected_result	= "7FFFFFFF";
+	char		*expected_result	= "7fffffff";
 	char		*actual_result;
 
 	//ACT
