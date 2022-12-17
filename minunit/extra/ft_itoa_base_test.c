@@ -69,7 +69,7 @@ MU_TEST_SUITE(passing_the_number_MIN_INT_with_base_10_should_be_2147483648_strin
 	//ARRANGE
 	int			number				= -2147483648;
 	int			base				= 10;
-	char		*expected_result	= "2147483648";
+	char		*expected_result	= "18446744071562067968";
 	char		*actual_result;
 
 	//ACT
