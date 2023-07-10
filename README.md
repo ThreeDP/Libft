@@ -9,15 +9,15 @@
 - [Sobre](#sobre)
 - [Como Usar](#como-usar)
   - [Clone do Projeto](#1-clone-do-projeto)
-  - [Criando a Biblioteca](#criando-a-biblioteca)
-  - [Compilando um Projeto com a Biblioteca](#Compilando-um-projeto-com-a-biblioteca)
-  - [Mais Comandos](#mais-comandos)
-- [O que Está Incluso](#o-que-esta-incluso)
-  - [Funções Básicas](#funções-básicas)
-  - [Manipulação de Memória](#manipulação-de-memória)
-  - [Manipulação de String](#manipulação-de-string)
-  - [Converções](#manipulação-de-string)
-  - [Manipulação de Lista Encadeada](#manipulação-de-lista-encadeada)
+  - [Criando a Biblioteca](#2-criando-a-biblioteca)
+  - [Compilando um Projeto com a Biblioteca](#3-compilando-um-projeto-com-a-biblioteca)
+  - [Mais Comandos](#4-mais-comandos)
+- [O que Está Incluso](#o-que-está-incluso)
+  - [Funções Básicas](#1-funções-básicas)
+  - [Manipulação de Memória](#2-manipulação-de-memória)
+  - [Manipulação de String](#3-manipulação-de-string)
+  - [Converções](#4-converções)
+  - [Manipulação de Lista Encadeada](#5-manipulação-de-lista-encadeada)
 - [TDD](#tdd)
 - [Glossário](#glossário)
 - [Agradecimentos](#agradecimentos)
@@ -72,7 +72,7 @@ Nesse projeto em específico o objetivo será criar um lib, que nada mais é que
   gcc -Wall -Werror -Wextra <files>.c -I ./Libft -L ./Libft -lft
   ```
     
-#### 4. Outros Comandos
+#### 4. Mais Comandos
   > Comandos necessários para a manutenção da biblioteca.
   
   Excluir arquivos binários
@@ -159,7 +159,7 @@ Nesse projeto em específico o objetivo será criar um lib, que nada mais é que
   ```
   > Realiza a escrita de valor hexadecimal em um fd.
 
-#### 3. Manipulação de Memória
+#### 2. Manipulação de Memória
   ```C
   void		*ft_memset(void *str, int c_fill, size_t n_bytes);
   ```
@@ -182,7 +182,7 @@ Nesse projeto em específico o objetivo será criar um lib, que nada mais é que
   void		*ft_calloc(size_t nmemb, size_t size);
   ```
 
-#### 4. Manipulação de String
+#### 3. Manipulação de String
   ```C
   size_t		ft_strlcpy(char *dst, const char *src, size_t size);
   ```
@@ -226,7 +226,7 @@ Nesse projeto em específico o objetivo será criar um lib, que nada mais é que
   void		ft_striteri(char *s, void (*f)(unsigned int, char*));
   ```
 
-#### 5. Converções
+#### 4. Converções
   ```C
   int			ft_toupper(int c);
   ```
@@ -248,7 +248,7 @@ Nesse projeto em específico o objetivo será criar um lib, que nada mais é que
   int			ft_atoi(const char *nptr);
   ```
 
-#### 6. Manipulação de Lista Encadeada
+#### 5. Manipulação de Lista Encadeada
   ```C
   t_list		*ft_lstnew(void *content);
   ```
