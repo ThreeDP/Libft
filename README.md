@@ -105,27 +105,27 @@ Nesse projeto em específico o objetivo será criar um lib, que nada mais é que
   ```C
   int			ft_isalpha(int c);
   ```
-  > Verifica se o inteiro passado está na faixa de caractere alfabético da tabela ASCII.
+  > [ft_isalpha](https://github.com/ThreeDP/Libft/blob/main/srcs/ft_isalpha.c): Verifica se o inteiro passado está na faixa de caractere alfabético da tabela ASCII.
   ```C
   int			ft_islower(int c);
   ```
-  > Verifica se o inteiro passado está na faixa de caractere alfabético minúsculo da tabela ASCII.
+  > [ft_islower](https://github.com/ThreeDP/Libft/blob/main/srcs/ft_islower.c): Verifica se o inteiro passado está na faixa de caractere alfabético minúsculo da tabela ASCII.
   ```C
   int			ft_isupper(int c);
   ```
-  > Verifica se o inteiro passado está na faixa de caractere alfabético maiúsculo da tabela ASCII.
+  > [ft_isupper](https://github.com/ThreeDP/Libft/blob/main/srcs/ft_isupper.c): Verifica se o inteiro passado está na faixa de caractere alfabético maiúsculo da tabela ASCII.
   ```C
   int			ft_isspace(int c);
   ```
-  > Verifica se o inteiro passado é um dos caracteres de espaçamento, '\t', '\n', '\v', '\f', '\r' ou ' ', da tabela ASCII.
+  > [ft_isspace](https://github.com/ThreeDP/Libft/blob/main/srcs/ft_isspace.c): Verifica se o inteiro passado é um dos caracteres de espaçamento, '\t', '\n', '\v', '\f', '\r' ou ' ', da tabela ASCII.
   ```C
   int			ft_isdigit(int c);
   ```
-  > Verifica se o inteiro passado está na faixa de caractere numérico da tabela ASCII.
+  > [ft_isdigit](https://github.com/ThreeDP/Libft/blob/main/srcs/ft_isdigit.c): Verifica se o inteiro passado está na faixa de caractere numérico da tabela ASCII.
   ```C
   int			ft_isalnum(int c);
   ```
-  > Verifica se o inteiro passado está na faixa de caractere alfabético e numérico, alfanumérico, da tabela ASCII.
+  > [ft_isalnum](https://github.com/ThreeDP/Libft/blob/main/srcs/ft_isalnum.c): Verifica se o inteiro passado está na faixa de caractere alfabético e numérico, alfanumérico, da tabela ASCII.
   
   ```C
   int			ft_isascii(int c);
@@ -134,31 +134,31 @@ Nesse projeto em específico o objetivo será criar um lib, que nada mais é que
   ```C
   int			ft_isprint(int c);
   ```
-  > Verifica se o inteiro passado está na faixa de caracteres  ASCII printavéis.
+  > [ft_isprint](https://github.com/ThreeDP/Libft/blob/main/srcs/ft_isprint.c): Verifica se o inteiro passado está na faixa de caracteres  ASCII printavéis.
   ```C
   size_t                  ft_strlen(const char *str);
   ```
-  > Retorna o numéro de caracteres contidos na string.
+  > [ft_strlen](https://github.com/ThreeDP/Libft/blob/main/srcs/ft_strlen.c): Retorna o numéro de caracteres contidos na string.
   ```C
   int			ft_putchar_fd(char c, int fd);
   ```
-  > Realiza a escrita de um único caracter em um fd.
+  > [ft_putchar_fd](https://github.com/ThreeDP/Libft/blob/main/srcs/ft_putchar_fd.c): Realiza a escrita de um único caracter em um fd.
   ```C
   int			ft_putstr_fd(char *s, int fd);
   ```
-  > Realiza a escrita de uma cadeia caracteres em um fd.
+  > [ft_putstr_fd](https://github.com/ThreeDP/Libft/blob/main/srcs/ft_putstr_fd.c): Realiza a escrita de uma cadeia caracteres em um fd.
   ```C
   int			ft_putendl_fd(char *s, int fd);
   ```
-  > Realiza a escrita de uma cadeia caracteres seguido de um '\n', quebra de linha, em um fd.
+  > [ft_putendl_fd](https://github.com/ThreeDP/Libft/blob/main/srcs/ft_putendl_fd.c): Realiza a escrita de uma cadeia caracteres seguido de um '\n', quebra de linha, em um fd.
   ```C
   int			ft_putnbr_fd(int nb, int fd);
   ```
-  > Realiza a escrita de valor numérico, inteiro, em um fd.
+  > [ft_putnbr_fd](https://github.com/ThreeDP/Libft/blob/main/srcs/ft_putnbr_fd.c): Realiza a escrita de valor numérico, inteiro, em um fd.
   ```C
   int			ft_puthex_fd(unsigned long nb, int fd, char *caset);
   ```
-  > Realiza a escrita de valor hexadecimal em um fd.
+  > [ft_puthex_fd](https://github.com/ThreeDP/Libft/blob/main/srcs/ft_puthex_fd.c): Realiza a escrita de valor hexadecimal em um fd.
 
 #### 2. Manipulação de Memória
   ```C
@@ -231,11 +231,11 @@ Nesse projeto em específico o objetivo será criar um lib, que nada mais é que
   ```C
   int			ft_toupper(int c);
   ```
-  > Realiza a conversão de um caracter ASCII alfabético minúsculo para maiúsculo.
+  > [ft_toupper](https://github.com/ThreeDP/Libft/blob/main/srcs/ft_toupper.c): Realiza a conversão de um caracter ASCII alfabético minúsculo para maiúsculo.
   ```C
   int			ft_tolower(int c);
   ```
-  > Realiza a conversão de um caracter ASCII alfabético  maiúsculo para minúsculo.  
+  > [ft_tolower](https://github.com/ThreeDP/Libft/blob/main/srcs/ft_tolower.c): Realiza a conversão de um caracter ASCII alfabético  maiúsculo para minúsculo.  
   ```C
   char		*ft_itoa(int n);
   ```
