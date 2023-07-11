@@ -126,10 +126,11 @@ Nesse projeto em específico o objetivo será criar um lib, que nada mais é que
   int			ft_isalnum(int c);
   ```
   > Verifica se o inteiro passado está na faixa de caractere alfabético e numérico, alfanumérico, da tabela ASCII.
+  
   ```C
   int			ft_isascii(int c);
   ```
-  > Verifica se o inteiro passado é um caracter ASCII válido.
+  > [ft_isascii](https://github.com/ThreeDP/Libft/blob/main/srcs/ft_isascii.c): Verifica se o inteiro passado é um caracter ASCII válido.
   ```C
   int			ft_isprint(int c);
   ```
